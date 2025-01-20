@@ -5,3 +5,10 @@ console.log(require);
 console.log(process)
 setInterval
 setTimeout
+module.exports
+require
+individuals exports
+
+//
+OS
+Path
