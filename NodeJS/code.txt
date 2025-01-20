@@ -19,3 +19,4 @@ http
 npm
 npm init
 Semver
+Nodemon
