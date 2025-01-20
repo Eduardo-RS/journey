@@ -19,39 +19,46 @@ class Products {
    - Usa un bucle para agregar al menos 3 productos diferentes.
 */
 
+/* 3. **Ejercicio 3: Mostrar los productos disponibles.**
+   - Añade un método `mostrarProductos()` a la clase `Tienda` que recorra el array de productos 
+     e imprima los detalles de cada producto usando su método `detalles()`.
+   - Usa un bucle `for` para este propósito.
+*/
+
 class Store {
-    constructor(){
-        this.products = [];
+  constructor() {
+    this.products = [];
+  }
+  addProduct(product) {
+    return this.products.push(product);
+  }
+  showProducts() {
+   // console.log(this.products);
+    for(let i = 0; i < this.products.length; i++) {
+      console.log(this.products[i].details());
     }
-    addProduct(product){
-        return this.products.push(product);
-    }
+  }
 }
 
 const Store1 = new Store();
 // console.log(Store1);
 
 let productList = [
-    new Products('Apple', 10, 50),
-    new Products('Oranje', 3.4, 34),
-    new Products('Grape', 12, 20),
-    new Products('Strawberry', 2.4, 50),
-    new Products('Banana', 3.5, 43)
-]
+  new Products("Apple", 10, 50),
+  new Products("Oranje", 3.4, 34),
+  new Products("Grape", 12, 20),
+  new Products("Strawberry", 2.4, 50),
+  new Products("Banana", 3.5, 43),
+];
 
-for(let i = 0; i < productList.length; i++){
-    // console.log(productList[i]);
-    Store1.addProduct(productList[i]);
+for (let i = 0; i < productList.length; i++) {
+  // console.log(productList[i]);
+  Store1.addProduct(productList[i]);
 }
 
-console.log(Store1.products);
+// console.log(Store1.products);
 
-
-/* 3. **Ejercicio 3: Mostrar los productos disponibles.**
-   - Añade un método `mostrarProductos()` a la clase `Tienda` que recorra el array de productos 
-     e imprima los detalles de cada producto usando su método `detalles()`.
-   - Usa un bucle `for` para este propósito.
-*/
+Store1.showProducts();
 
 /* 4. **Ejercicio 4: Buscar un producto por su nombre.**
    - Añade un método `buscarProducto(nombre)` a la clase `Tienda` que busque un producto
