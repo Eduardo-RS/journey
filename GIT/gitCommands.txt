@@ -1,0 +1,171 @@
+git init
+git branch -m branch name
+git add
+git commit -m "Message"
+// Consultar cambios
+- git log
+- git log graph
+- git status
+
+git checkout
+git reset
+git alias 
+
+// Ignorar archivos dentro del proyecto que estamos trabajando
+.gitignore
+
+// Revisar diferencias entre versiones
+
+git diff 
+git diff "File.js"
+
+// Regresar entre versiones
+git checkout + el id del cambio
+
+git reset-hard mas el id del commit 
+git reflog
+
+git tag
+git checkout tags/nombre del tag 
+
+git branch
+git switch
+
+git merge
+git stash
+eliminación de ramas
+git branch -d "branch name login"
+
+git push
+git fetch
+git clone
+
+
+
+
+
+Aquí tienes un resumen claro y sencillo de los comandos sugeridos, con su propósito y uso explicado:
+
+---
+
+### **1. `git fetch [remote]`**
+- **Propósito**: Descarga los cambios del repositorio remoto (commits, nuevas ramas, objetos) al historial local, pero **no los aplica automáticamente** a tu rama actual.
+- **Uso típico**: 
+  ```bash
+  git fetch upstream
+  ```
+  Descarga los cambios del repositorio principal configurado como `upstream`.
+
+- **Cuándo usarlo**: 
+  - Para revisar los cambios disponibles antes de aplicarlos.
+  - Si deseas sincronizarte sin modificar tu rama actual inmediatamente.
+
+---
+
+### **2. `git merge [remote/branch]`**
+- **Propósito**: Combina los cambios descargados (con `git fetch`) desde una rama remota con tu rama local.
+- **Uso típico**: 
+  ```bash
+  git merge upstream/main
+  ```
+  Combina los cambios de `upstream/main` con tu rama local.
+
+- **Cuándo usarlo**: 
+  - Después de `git fetch`, cuando estés listo para integrar los cambios descargados.
+  - Si necesitas resolver conflictos con más control.
+
+---
+
+### **3. `git pull [remote] [branch]`**
+- **Propósito**: Combina `git fetch` y `git merge` en un solo paso, descargando e integrando automáticamente los cambios en tu rama actual.
+- **Uso típico**: 
+  ```bash
+  git pull upstream main
+  ```
+  Descarga e integra los cambios del repositorio principal (`upstream`) directamente en tu rama `main`.
+
+- **Cuándo usarlo**: 
+  - Para sincronizar rápidamente una rama local que no tiene cambios pendientes.
+  - En situaciones simples o proyectos pequeños con pocas colaboraciones.
+
+---
+
+### **4. `git remote -v`**
+- **Propósito**: Lista todos los repositorios remotos configurados en tu repositorio local y sus URLs.
+- **Uso típico**: 
+  ```bash
+  git remote -v
+  ```
+  Verifica si tienes configurados remotos como `origin` (tu fork) y `upstream` (el repositorio principal).
+
+- **Cuándo usarlo**: 
+  - Para comprobar a qué repositorios estás conectado.
+  - Si no estás seguro de si configuraste el remoto `upstream`.
+
+---
+
+### **5. `git log [remote/branch]`**
+- **Propósito**: Muestra los commits del historial de una rama remota o local.
+- **Uso típico**: 
+  ```bash
+  git log upstream/main
+  ```
+  Muestra los commits de `upstream/main` para que puedas revisar los cambios antes de fusionarlos.
+
+- **Cuándo usarlo**: 
+  - Para inspeccionar los cambios descargados con `git fetch`.
+  - Para entender qué se modificó en el repositorio remoto.
+
+---
+
+### **6. `git diff [branch1] [branch2]`**
+- **Propósito**: Compara los cambios entre dos ramas.
+- **Uso típico**: 
+  ```bash
+  git diff main upstream/main
+  ```
+  Compara tu rama local `main` con `upstream/main` y muestra las diferencias.
+
+- **Cuándo usarlo**: 
+  - Para ver exactamente qué cambios se agregarán antes de hacer un merge.
+
+---
+
+### **7. `git checkout [branch]`**
+- **Propósito**: Cambia a una rama específica en tu repositorio local.
+- **Uso típico**: 
+  ```bash
+  git checkout main
+  ```
+  Cambia a la rama `main` para trabajar en ella o actualizarla.
+
+- **Cuándo usarlo**: 
+  - Antes de fusionar o sincronizar cambios en una rama específica.
+
+---
+
+### **Resumen en Ejemplo Práctico**
+Si quieres sincronizar tu repositorio local con el repositorio principal (usando el remoto `upstream`):
+
+1. **Descarga los cambios del repositorio principal**:
+   ```bash
+   git fetch upstream
+   ```
+
+2. **Inspecciona los cambios descargados** (opcional):
+   ```bash
+   git log upstream/main
+   git diff main upstream/main
+   ```
+
+3. **Fusiona los cambios con tu rama local**:
+   ```bash
+   git merge upstream/main
+   ```
+
+4. **Alternativa rápida si no tienes cambios locales**:
+   ```bash
+   git pull upstream main
+   ```
+
+Estos comandos cubren las acciones básicas para trabajar en equipo usando Git y GitHub.
