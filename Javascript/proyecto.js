@@ -164,3 +164,20 @@ for(let i = 0; i < newProductList.length; i++){
     totalInventory += newProductList[i].price * newProductList[i].quantity;
     console.log(totalInventory);
 }
+
+
+class Movies {
+  constructor(movieName, publishDate, price){
+    this.movieName = movieName,
+    this.publishDate = publishDate,
+    this.price = price
+  }
+  get movies(){
+    return this.movieName;
+  }
+}
+
+const avatarMovie = new Movies('Avatar', 2009, 15.9);
+console.log(avatarMovie);
+
+console.log(avatarMovie.movies);
