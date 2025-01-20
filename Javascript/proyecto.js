@@ -181,3 +181,9 @@ const avatarMovie = new Movies('Avatar', 2009, 15.9);
 console.log(avatarMovie);
 
 console.log(avatarMovie.movies);
+
+const JohnWick = new Movies('John Wick', 2014, 10);
+console.log(JohnWick);
+
+console.log('JohnWick.movies');
+
