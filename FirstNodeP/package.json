@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "execute": "node src/app.js"
+    "execute": "node src/app.js",
+    "load":  "nodemon src/app.js"
   },
   "keywords": [
     "first",
@@ -16,5 +17,8 @@
   "license": "ISC",
   "dependencies": {
     "colors": "^1.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
   }
 }
