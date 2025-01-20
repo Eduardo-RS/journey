@@ -12,3 +12,6 @@ individuals exports
 //
 OS
 Path
+fs.readfile
+fs.readfileSync
+fs.writeFileSync
