@@ -26,3 +26,5 @@ promises
 async/await
 promisify
 fs promises
+events
+streams
