@@ -21,3 +21,8 @@ npm init
 npx
 Semver
 Nodemon
+event loop
+promises
+async/await
+promisify
+fs promises
